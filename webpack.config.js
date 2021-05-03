@@ -1,8 +1,9 @@
 const path = require('path');
-const htmlWebpackPlugin = require('html-webpack-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
+  target: 'web',
   entry: {
     app: path.join(__dirname, 'src/index.js')
   },
@@ -23,12 +24,14 @@ module.exports = {
 
   devServer: {
     host: '0.0.0.0',
-    port: 8080,
-    inline: true
+    port: 3000,
+    open: true,
+    historyApiFallback: true,
+    allowedHosts: 'all'
   },
 
   plugins: [
-    new htmlWebpackPlugin({
+    new HTMLWebpackPlugin({
       template: path.join(__dirname, 'src/index.html'),
       filename: 'index.html'
     })

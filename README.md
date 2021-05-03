@@ -1,3 +1,3 @@
-# Example Upload IMG
+# Example POO
 
-This project was created to learn how to upload img with Javascript.
+This project was created to understand basic theory about POO.
