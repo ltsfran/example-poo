@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "allowJs": true,
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "target": "es5",
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2015",
+      "es2015.promise"
+    ]
+  },
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
+}

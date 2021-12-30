@@ -5,7 +5,7 @@ module.exports = {
   mode: 'development',
   target: 'web',
   entry: {
-    app: path.join(__dirname, 'src/index.js')
+    app: path.join(__dirname, 'src/index.ts')
   },
 
   output: {
@@ -16,10 +16,19 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+      {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader']
       }
     ]
+  },
+
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js']
   },
 
   devServer: {
