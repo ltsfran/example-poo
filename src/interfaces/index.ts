@@ -1,0 +1,1 @@
+export { ISubmitForm } from './ISubmitForm';
